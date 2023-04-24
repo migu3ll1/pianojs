@@ -1,0 +1,337 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: #D9C8B4;
+    overflow-x: hidden;
+    transition: all 1s;
+    font-family: sans-serif;
+}
+main{
+    display: flex;
+    justify-content: stretch;
+    flex-direction: row;
+    animation: forwards 5s aberturaVertical;
+    background-color: #D9C8B4;
+}
+
+/*teclas*/
+#tecla1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10vh 10vh 10vh;
+    grid-template-areas: 
+        "br pt"
+        "br pt"
+        "br2 br2";
+
+    width: 15vw;
+    background-color: aliceblue;
+}
+#tecla2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10vh 10vh 10vh;
+    grid-template-areas: 
+        "br pt"
+        "br pt"
+        "br2 br2";
+
+    width: 15vw;
+    background-color: aliceblue;
+}
+#tecla3{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10vh 10vh 10vh;
+    grid-template-areas: 
+        "br br"
+        "br br"
+        "br br";
+    width: 15vw;
+    background-color: aliceblue;
+}
+#tecla4{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10vh 10vh 10vh;
+    grid-template-areas: 
+        "br br"
+        "br br"
+        "br br";
+
+    width: 15vw;
+    background-color: aliceblue;
+}
+#tecla5{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10vh 10vh 10vh;
+    grid-template-areas: 
+        "pt br"
+        "pt br"
+        "br2 br2";
+
+    width: 15vw;
+    background-color: aliceblue;
+}
+#tecla6{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10vh 10vh 10vh;
+    grid-template-areas: 
+        "pt br"
+        "pt br"
+        "br2 br2";
+
+    width: 15vw;
+    background-color: aliceblue;
+}
+#tecla7{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10vh 10vh 10vh;
+    grid-template-areas: 
+        "pt br"
+        "pt br"
+        "br2 br2";
+
+    width: 15vw;
+    background-color: aliceblue;
+}
+/*teclas*/
+
+footer{
+    display: flex;
+    justify-content: space-around;
+}
+.branca{
+    background-color: aliceblue;
+    grid-area: br;
+    border: solid rgb(78, 77, 77) 1px;
+    border-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.branca2{
+    background-color: aliceblue;
+    grid-area: br2;
+    border: solid rgb(78, 77, 77) 1px;
+    border-top: 0;
+    border-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.preta{
+    background-color: black;
+    grid-area: pt;
+    border: solid rgb(78, 77, 77) 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lt_preta{
+    color: aliceblue;
+}
+@keyframes ative_tecla{
+    0%{
+        opacity: 1;
+        padding: 0;
+    }
+    100%{
+        opacity: 0;
+        padding: 15px;
+    }
+}
+@keyframes regitro_nts{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes abertura{
+    from{
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes aberturaVertical{
+    from{
+        transform: translateY(-1000px);
+    }
+    to{
+        transform: translateY(0);
+    }
+}
+@keyframes fundo{
+    0% {
+        background-position: 0% 50%
+    }
+    50% {
+        background-position: 100% 50%
+    }
+    100% {
+        background-position: 0% 50%
+    }
+}
+.ative_tecla{
+    animation: alternate .25s ative_tecla;
+    border: 0;
+    transition: all .20s;
+}
+.active_teclaPT{
+    background-color: azure;
+    color: black;
+    transition: all .2s;
+}
+.txt_notas{
+    width: 85vw;
+    height: 28vh;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30vh;
+    background-color: rgba(240, 248, 255, 0.493);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    height: 80vh;
+    animation: forwards 4s abertura;    
+}
+.nt_salva{
+    height: fit-content;
+    background-color:#8C8C8C;
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    opacity: 0;
+    color: bisque;
+    margin-top: 15px;
+}
+.opem_nts{
+    animation: forwards 2s regitro_nts;
+}
+h3{
+    margin: 15px;
+    color: darkslategray;
+    animation: forwards 1s abertura;
+}
+p{
+    margin: 5px;
+    color: darkslategrey;
+    font-size: large;
+}
+.musica{
+    background-color: #D9C8B4;
+    padding: 10px;
+    border-radius: 5px;
+    filter: saturate(150%);
+    animation: forwards 3s abertura;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.titulo_registro{
+    animation: forwards 2s abertura;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-radius: 10px;
+    color: rgb(78, 77, 77);
+}
+.movel{
+    background-color: #8C8C8C;
+    color: aliceblue;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+button{
+    margin-top: 20px;
+    margin-right: 25px;
+    margin-left: 25px;
+    text-decoration: none;
+    background-color: aliceblue;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    background-image: linear-gradient(45deg, #D9C4B8, #BFADA3, #8C8C8C, #506266, #404040) ;
+    background-size: 400% 400%;
+    font-size: medium;
+    color: aliceblue;
+    animation: ease infinite 4s fundo;
+}
+.conteiner_button{
+    display: flex;
+    flex-direction: row;
+}
+input{
+    margin-top: 15px;
+    border-radius: 5px;
+    padding: 20px;
+    border:0;
+    text-align: center;
+    font-size: larger;
+}
+.teclado_cel{
+    display: none;
+}
+#txt{
+    margin-top: 20px;
+    font-size: larger;
+    color: aliceblue;
+}
+.abertura{
+    animation: forwards 1s abertura;
+}
+.parametros_abertura_2{
+    border-bottom: solid 2px aliceblue;
+    border-radius: 100%;
+    padding: 20px;
+}
+button:hover{
+    padding: 30px;
+    transition: all .5s;
+    
+}
+@media(max-width:500px){
+    .musica{
+        margin-top: 0;
+        text-align: center;
+    }
+    footer{
+        height: 200vh;
+        text-align: center;
+    }
+    .nt_salva{
+        padding: 15px;
+        margin-top: 15px;
+    }
+    .titulo_registro{
+        margin-bottom: 10px;
+    }
+}

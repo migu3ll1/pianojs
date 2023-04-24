@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>piano</title>
+</head>
+<body onkeydown="detecta(event)" onkeyup="removeAnimation()">
+    <main>
+        <section id="tecla1">
+            <div class="branca"></div>
+            <div class="branca2"><p>A</p></div>
+            <div class="preta" id="pretaW"><p class="lt_preta">W</p></div>
+        </section>
+
+        <section id="tecla2">
+            <div class="branca"></div>
+            <div class="branca2"><p>S</p></div>
+            <div class="preta" id="pretaE"><p class="lt_preta">E</p></div>
+        </section>
+
+        <section id="tecla3">
+            <div class="branca"><p>D</p></div>
+            <div class="branca2"></div>
+            <div class="preta"></div>
+        </section>
+
+        <section id="tecla4">
+            <div class="branca"><p>F</p></div>
+            <div class="branca2"></div>
+            <div class="preta"></div>
+        </section>
+
+        <section id="tecla5">
+            <div class="branca"></div>
+            <div class="branca2"><p>G</p></div>
+            <div class="preta" id="pretaY"><p class="lt_preta">Y</p></div>
+        </section>
+
+        <section id="tecla6">
+            <div class="branca"></div>
+            <div class="branca2"><p>H</p></div>
+            <div class="preta" id="pretaU"><p class="lt_preta">U</p></div>
+        </section>
+
+        <section id="tecla7">
+            <div class="branca"></div>
+            <div class="branca2"><p>J</p></div>
+            <div class="preta" id="pretaI"><p class="lt_preta">I</p></div>
+        </section>
+    </main>
+    <footer>
+        <section class="txt_notas">
+            <h1 class="titulo_registro">notas tocadas</h1>
+            <div class="nt_salva"></div>
+            <article>
+                <h3>Comandos para tocar sua primeira musica</h3>
+                <p class="musica">G  H  G  A  J   G  G  H  G  S  A  G  G  D  A  A  J  H  F  F  D  A  A</p>
+            </article>
+            
+            <div class="movel">
+                <h1 class="titulo_mob">Você esta usando nosso site por um dispositivo movel? </h1>
+                <div class="conteiner_button"> 
+                    <button id="cel_true" onclick="celYes()">SIM</button>
+                    <button  id="cel_false" onclick="celNot()">NÃO</button>
+                </div>
+                <input class="teclado_cel" type="text" placeholder="use esse campo para tocar">
+                <div id="txt"></div>
+            </div>
+           
+        </section>
+    </footer>
+</body>
+</html>
